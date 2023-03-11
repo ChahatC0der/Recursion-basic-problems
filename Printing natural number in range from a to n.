@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class javabasics{
+    public static void printing1tonUsingRecursion(int n,int a) {
+        
+        if(n+1==a){
+            return;
+        }
+        System.out.println(a);
+        printing1tonUsingRecursion(n,a+1);
+
+
+        
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        printing1tonUsingRecursion(10,5);
+       
+    }
+}
