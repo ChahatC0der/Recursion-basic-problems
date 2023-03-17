@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class javabasics{
+    
+    public static int index=-1;
+    public static int linearSearchInArrayUsingRecursion(int arr[],int n,int key){
+        
+        if(n==-1){          
+            return n;
+        }
+// To find first occurence of an element in an array
+        if(arr[n]==key){
+            index=n;
+        }
+        linearSearchInArrayUsingRecursion(arr,n-1,key);
+        return index;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number of elements to enter in an array");
+        int n = sc.nextInt();
+        int arr[]=new int[n];   
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.println("enter element to be found ");
+        int key=sc.nextInt();
+        int indexFound=linearSearchInArrayUsingRecursion(arr,n-1,key);
+        if(indexFound==-1){
+            System.out.println("Element not found");
+        }else{
+            System.out.println("Element is found at index:"+indexFound);
+        }
+           
+    }
+}
