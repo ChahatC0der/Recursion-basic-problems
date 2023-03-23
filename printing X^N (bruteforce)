@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class javabasics{
+    
+    public static int answer=1;
+    public static int printXToThePowerOfN(int x,int n) {
+        if(n==0){
+            return 1;
+        }
+        
+        printXToThePowerOfN(x, n-1);
+        answer*=x;
+        return answer;
+        
+    }
+    
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int x=sc.nextInt();
+        int n=sc.nextInt();
+        System.out.println(printXToThePowerOfN(x, n));
+           
+    }
+}
